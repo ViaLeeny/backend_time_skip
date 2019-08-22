@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  root 'topics#index'
+  root 'users#signin'
 
   resources :topics
   resources :likes
