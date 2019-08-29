@@ -307,12 +307,4 @@ events = Event.create([
 	topic_id: 2}
 ])
 
-# 100.times do
-#   Contribution.create(user_id: User.all.sample.id,
-#                       event_id: Event.all.sample.id,
-#                       text: Faker::Books::Dune.quote,
-#                       url: image_urls.sample)
-
-#   end
-
 
