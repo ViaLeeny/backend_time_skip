@@ -1,10 +1,11 @@
 require "faker"
 
 
-Contribution.destroy_all
+
 Topic.destroy_all
 User.destroy_all
 Event.destroy_all
+Contribution.destroy_all
 
 
 image_urls = ["https://cdn.pixabay.com/photo/2019/06/12/15/07/cat-4269479_1280.jpg",
@@ -167,7 +168,7 @@ events = Event.create([
 # 	topic_id: 2} ,
 
 	{name: "Nintendo Entertainment System",
-	image_url: "http://www.lezebre.eu/hobby/nintendo/ninendo%20photo/Nintendo_NES.jpg",
+	image_url: "https://www.lezebre.eu/hobby/nintendo/ninendo%20photo/Nintendo_NES.jpg",
 	description: "Nintendo Entertainment System (NES) is released, with worldwide sales eventually reaching 61,910,000 units." ,
 	date: "01/01/1985",
 	topic_id: 2} ,
@@ -287,7 +288,6 @@ events = Event.create([
 	date: "01/01/2006",
 	topic_id: 2} ,
 
-
 	{name: "Rock Band",
 	image_url: "https://www.lifewire.com/thmb/dg7xolDieu2KEKhtyatbZlL7TS8=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/rockband_01-56a7373f3df78cf772935f67.jpg",
 	description: "Rock Band is released, complete with microphone, drum and guitar controllers. This popular title draws in a whole new crowd of gamers wanting more physical interactivity, like DDR used to provide." ,
@@ -307,12 +307,12 @@ events = Event.create([
 	topic_id: 2}
 ])
 
-100.times do
-  Contribution.create(user_id: User.all.sample.id,
-                      event_id: Event.all.sample.id,
-                      text: Faker::Books::Dune.quote,
-                      url: image_urls.sample)
+# 100.times do
+#   Contribution.create(user_id: User.all.sample.id,
+#                       event_id: Event.all.sample.id,
+#                       text: Faker::Books::Dune.quote,
+#                       url: image_urls.sample)
 
-  end
+#   end
 
 
